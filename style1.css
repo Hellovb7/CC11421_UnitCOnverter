@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1#heading {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    background-color: orangered;
+    text-align: center;
+    margin: 15px auto 0 auto;
+    width: 80%;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+div {
+    display: inline-block;
+}
+
+input[type="number"],
+select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+p {
+    font-weight: bold;
+}
+
+.inpt {
+    padding: 5px 10px;
+    margin: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+}
+.lable{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}

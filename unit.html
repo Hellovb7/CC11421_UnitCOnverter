@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <h1 id="heading">Unit Converter</h1>
+    <div id="container">
+        <div>
+            <input type="number" id="input" placeholder="Enter value to convert" class="inpt">
+            <div class="lable">
+                <select id="from">
+                    <option value="meters">Meters</option>
+                    <option value="feet">Feet</option>
+                    <option value="inches">Inches</option>
+                </select>
+                <select id="to">
+                    <option value="meters">Meters</option>
+                    <option value="feet">Feet</option>
+                    <option value="inches">Inches</option>
+                </select>
+            </div>
+            <button onclick="convert()">Convert</button>
+            <p id="output"></p>
+        </div>
+    </div>
+    <script>
+        function convert() {
+            const input = document.getElementById('input').value;
+            const from = document.getElementById('from').value;
+            const to = document.getElementById('to').value;
+
+            let result;
+
+            if (from === 'meters' && to === 'feet') {
+                result = input * 3.281;
+            } else if (from === 'meters' && to === 'inches') {
+                result = input * 39.37;
+            } else if (from === 'feet' && to === 'meters') {
+                result = input / 3.281;
+            } else if (from === 'feet' && to === 'inches') {
+                result = input * 12;
+            } else if (from === 'inches' && to === 'meters') {
+                result = input / 39.37;
+            } else if (from === 'inches' && to === 'feet') {
+                result = input / 12;
+            } else {
+                result = input;
+            }
+
+            document.getElementById('output').textContent = `${input} ${from} is equal to ${result.toFixed(2)} ${to}`;
+        }
+
+    </script>
+</body>
+
+</html>
